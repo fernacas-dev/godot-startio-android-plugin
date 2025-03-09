@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ShowBanner" type="Button" parent="CanvasLayer"]
+margin_left = 96.0
+margin_top = 64.0
+margin_right = 290.0
+margin_bottom = 127.0
+text = "Show Banner"
+
+[node name="HideBanner" type="Button" parent="CanvasLayer"]
+margin_left = 96.0
+margin_top = 152.0
+margin_right = 290.0
+margin_bottom = 215.0
+text = "Hide Banner"
+
+[node name="ShowInterstitial" type="Button" parent="CanvasLayer"]
+margin_left = 96.0
+margin_top = 240.0
+margin_right = 290.0
+margin_bottom = 303.0
+text = "Show Interstitial"
+
+[node name="HideInterstitial" type="Button" parent="CanvasLayer"]
+margin_left = 96.0
+margin_top = 328.0
+margin_right = 290.0
+margin_bottom = 391.0
+text = "Show Rewarded Ad"
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer"]
+margin_left = 18.0
+margin_top = 416.0
+margin_right = 365.0
+margin_bottom = 622.0
+
+[connection signal="pressed" from="CanvasLayer/ShowBanner" to="." method="_on_show_banner_pressed"]
+[connection signal="pressed" from="CanvasLayer/HideBanner" to="." method="_on_hide_banner_pressed"]
+[connection signal="pressed" from="CanvasLayer/ShowInterstitial" to="." method="_on_show_interstitial_pressed"]
+[connection signal="pressed" from="CanvasLayer/HideInterstitial" to="." method="_on_show_rewarded_pressed"]

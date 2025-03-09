@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.badlight.startioadplugin">
+    <uses-permission android:name="android.permission.AD_ID" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application>
+
+        <meta-data
+            android:name="org.godotengine.plugin.v1.StartIOAd"
+            android:value="com.badlight.startioadplugin.StartIOAd"
+            />
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="YOUR_APP_ID" />
+    </application>
+
+</manifest>
